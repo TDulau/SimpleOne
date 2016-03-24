@@ -9,10 +9,19 @@ import java.util.Set;
  */
 public class RandomNumbersProvider {
 
+    /**
+     * size of the generate numbers set
+     */
     private int size;
 
+    /**
+     * minimum value for generated numbers
+     */
     private int lowerLimit;
 
+    /**
+     * maximum value for generated numbers
+     */
     private int higherLimit;
 
     public RandomNumbersProvider(int size, int lowerLimit, int higherLimit) {
