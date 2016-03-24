@@ -9,6 +9,7 @@ public class Simple {
     public static void main(String[] args) {
 
         int div = 2;
+
         RandomNumbersProvider provider = new RandomNumbersProvider(6, 1, 50);
         Set<Integer> generatedNumbers = provider.generateNumbers();
         System.out.println("\nNumbers generated:");
