@@ -67,6 +67,10 @@ public class RandomNumbersProvider {
     }
 
     public Set<Integer> generateNumbers() {
+
+        if (size > (higherLimit - lowerLimit) / 2)
+            System.out.println("This may take a while ...");
+
         Random random = new Random();
         Set<Integer> numbersSet = new HashSet<Integer>();
         boolean alreadyThere;
