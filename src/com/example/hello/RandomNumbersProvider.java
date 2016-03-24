@@ -41,6 +41,8 @@ public class RandomNumbersProvider {
     }
 
     public void setSize(int size) {
+        if (size > higherLimit - lowerLimit)
+            throw new IllegalArgumentException("specified size is too big");
         this.size = size;
     }
 
@@ -49,6 +51,8 @@ public class RandomNumbersProvider {
     }
 
     public void setLowerLimit(int lowerLimit) {
+        if (higherLimit <= lowerLimit)
+            throw new IllegalArgumentException("higherLimit needs to be greater than lowerLimit");
         this.lowerLimit = lowerLimit;
     }
 
@@ -57,6 +61,8 @@ public class RandomNumbersProvider {
     }
 
     public void setHigherLimit(int higherLimit) {
+        if (higherLimit <= lowerLimit)
+            throw new IllegalArgumentException("higherLimit needs to be greater than lowerLimit");
         this.higherLimit = higherLimit;
     }
 
