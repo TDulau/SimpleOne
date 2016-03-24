@@ -66,10 +66,14 @@ public class RandomNumbersProvider {
         this.higherLimit = higherLimit;
     }
 
+    /**
+     * Trouble-causing lousy comment
+     * @return
+     */
     public Set<Integer> generateNumbers() {
 
         if (size > (higherLimit - lowerLimit) / 2)
-            System.out.println("This may take a while ...");
+            System.out.println("This may take a few moments ...");
 
         Random random = new Random();
         Set<Integer> numbersSet = new HashSet<Integer>();
