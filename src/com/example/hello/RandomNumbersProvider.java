@@ -66,6 +66,10 @@ public class RandomNumbersProvider {
         this.higherLimit = higherLimit;
     }
 
+    /**
+     * Generate a number of random number within the provided range
+     * @return
+     */
     public Set<Integer> generateNumbers() {
 
         if (size > (higherLimit - lowerLimit) / 2)
