@@ -67,7 +67,7 @@ public class RandomNumbersProvider {
     }
 
     /**
-     * Trouble-causing lousy comment
+     * Generate a number of random number within the provided range
      * @return
      */
     public Set<Integer> generateNumbers() {
