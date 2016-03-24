@@ -22,6 +22,9 @@ public class RandomNumbersProvider {
 
         if (higherLimit <= lowerLimit)
             throw new IllegalArgumentException("higherLimit needs to be greater than lowerLimit");
+
+        if (size > higherLimit - lowerLimit)
+            throw new IllegalArgumentException("specified size is too big");
     }
 
     public int getSize() {
@@ -56,7 +59,7 @@ public class RandomNumbersProvider {
             do {
                 int number = random.nextInt(higherLimit - lowerLimit) + lowerLimit;
                 alreadyThere = !numbersSet.add(number);
-                System.out.println((!alreadyThere ? "  " : "") + "generated " + number + " " +
+                System.out.println((!alreadyThere ? "+" : "|") + "generated " + number + " " +
                         (!alreadyThere ? "not contained" : "already there"));
             } while (alreadyThere);
         }
