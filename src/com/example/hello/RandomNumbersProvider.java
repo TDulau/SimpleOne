@@ -19,6 +19,9 @@ public class RandomNumbersProvider {
         this.size = size;
         this.lowerLimit = lowerLimit;
         this.higherLimit = higherLimit;
+
+        if (higherLimit <= lowerLimit)
+            throw new IllegalArgumentException("higherLimit needs to be greater than lowerLimit");
     }
 
     public int getSize() {
