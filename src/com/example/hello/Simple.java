@@ -6,7 +6,7 @@ package com.example.hello;
 public class Simple {
     public static void main(String[] args) {
 
-        int div = 5;
+        int div = 3;
 
         for (int i = 0; i < 14; i++) {
             System.out.println(i + ": I'm saying HI!");
