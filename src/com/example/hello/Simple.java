@@ -5,8 +5,6 @@ import java.util.Set;
 /**
  * Created by Tudor on 3/22/2016.
  */
-
-// dirty comment
 public class Simple {
     public static void main(String[] args) {
 
