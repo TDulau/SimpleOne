@@ -1,8 +1,6 @@
 package com.example.hello;
 
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Tudor on 3/24/2016.
@@ -75,17 +73,26 @@ public class RandomNumbersProvider {
         if (size > (higherLimit - lowerLimit) / 2)
             System.out.println("This may take a few moments ...");
 
-        Random random = new Random();
-        Set<Integer> numbersSet = new HashSet<Integer>();
-        boolean alreadyThere;
-        for (int i = 0; i < size; i++) {
-            do {
-                int number = random.nextInt(higherLimit - lowerLimit) + lowerLimit;
-                alreadyThere = !numbersSet.add(number);
-                System.out.println((!alreadyThere ? "+" : "|") + "generated " + number + " " +
-                        (!alreadyThere ? "not contained" : "already there"));
-            } while (alreadyThere);
+//        Random random = new Random();
+//        Set<Integer> numbersSet = new HashSet<Integer>();
+//        boolean alreadyThere;
+//        for (int i = 0; i < size; i++) {
+//            do {
+//                int number = random.nextInt(higherLimit - lowerLimit) + lowerLimit;
+//                alreadyThere = !numbersSet.add(number);
+//                System.out.println((!alreadyThere ? "+" : "|") + "generated " + number + " " +
+//                        (!alreadyThere ? "not contained" : "already there"));
+//            } while (alreadyThere);
+//        }
+
+        ArrayList<Integer> numList = new ArrayList<Integer>();
+        for (int i = lowerLimit; i < higherLimit; i++) {
+            numList.add(i);
         }
+        Collections.shuffle(numList);
+
+        Set<Integer> numbersSet = new HashSet<Integer>();
+        numbersSet.addAll(numList.subList(0, 6));
         return numbersSet;
     }
 }
