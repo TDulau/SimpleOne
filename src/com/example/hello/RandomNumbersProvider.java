@@ -73,18 +73,6 @@ public class RandomNumbersProvider {
         if (size > (higherLimit - lowerLimit) / 2)
             System.out.println("This may take a few moments ...");
 
-//        Random random = new Random();
-//        Set<Integer> numbersSet = new HashSet<Integer>();
-//        boolean alreadyThere;
-//        for (int i = 0; i < size; i++) {
-//            do {
-//                int number = random.nextInt(higherLimit - lowerLimit) + lowerLimit;
-//                alreadyThere = !numbersSet.add(number);
-//                System.out.println((!alreadyThere ? "+" : "|") + "generated " + number + " " +
-//                        (!alreadyThere ? "not contained" : "already there"));
-//            } while (alreadyThere);
-//        }
-
         ArrayList<Integer> numList = new ArrayList<Integer>();
         for (int i = lowerLimit; i < higherLimit; i++) {
             numList.add(i);
